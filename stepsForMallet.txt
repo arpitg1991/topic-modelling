@@ -1,0 +1,6 @@
+1.  bin/mallet import-dir --input ../nobel/nobelprize/files --output ../nobel/nobelprize/files/tutorial.mallet --keep-sequence
+
+2.bin/mallet train-topics --input ../nobel/nobelprize/files/tutorial.mallet --num-topics 5 --output-state ../nobel/nobelprize/files/topic-state.gz --output-topic-keys ../nobel/nobelprize/files/keys.txt --output-doc-topics ../nobel/nobelprize/files/tutorial_composition.txt
+
+
+
