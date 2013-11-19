@@ -3,7 +3,7 @@
 %%%pop_density is a row vector of size say, 1X10^6
 %%%
 
-function [cohort LL Token ]   = cohort_simulator(n,pop_density,pop,begin,batch)
+function [cohort LL Token ]   = cohort_simulator_full(n,pop_density,pop,begin,batch)
 cohort = zeros(n, length(pop_density)); 
 allele_sample = rand(n,length(pop_density),2); 
 
@@ -19,8 +19,8 @@ formatSpec = '%dV%d ';
 LL = 0;
 Token = 0; 
 for i=1:n
-	filename = sprintf('files/files%d/pop%dindiv%d.txt',batch,pop,i);
-	filename2 = sprintf('test/files%d/pop%dindiv%d.txt',batch,pop,i);
+	filename = sprintf('files/pop%dindiv%d.txt',pop,i);
+	filename2 = sprintf('test/pop%dindiv%d.txt',pop,i);
 	Ind = find((base != cohort(i,:)) == 1) ;
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
